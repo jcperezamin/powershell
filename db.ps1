@@ -1,5 +1,5 @@
 #Change CD drive letter
-$drv = Get-WmiObject win32_volume -filter 'DriveLetter = "E:"'
+$drv = Get-WmiObject win32_volume -filter 'DriveLetter = "F:"'
 $drv.DriveLetter = "Z:"
 $drv.Put() | out-null
 #Initialize-Disk 2 -PartitionStyle MBR
