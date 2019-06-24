@@ -1,8 +1,7 @@
 #Change CD drive letter
-#$drv = Get-WmiObject win32_volume -filter 'DriveLetter = "E:"'
-#$drv.DriveLetter = "Z:"
-#$drv.Put() | out-null
-#New-Item -Path 'C:\temp\jc' -ItemType Directory
+$drv = Get-WmiObject win32_volume -filter 'DriveLetter = "E:"'
+$drv.DriveLetter = "Z:"
+$drv.Put() | out-null
 #Initialize-Disk 2 -PartitionStyle MBR
 #Initialize-Disk 3 -PartitionStyle MBR
 #Get-Disk -Number 2 | New-Partition -UseMaximumSize -DriveLetter E | Format-Volume -FileSystem NTFS -NewFileSystemLabel "ORADATA" -Confirm:$False
